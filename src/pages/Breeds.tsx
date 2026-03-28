@@ -146,8 +146,9 @@ export default function Breeds() {
     setFactLoading(true);
     try {
       const response = await fetch("/api/cat/fact");
+      if (!response.ok) throw new Error("Failed to fetch cat fact");
       const data = await response.json();
-      setCatFact(data.fact);
+      setCatFact(typeof data?.fact === "string" ? data.fact : "No fact available right now.");
     } catch (err) {
       console.error("Error fetching cat fact:", err);
     } finally {
@@ -159,10 +160,12 @@ export default function Breeds() {
     setGalleryLoading(true);
     try {
       const response = await fetch("/api/cat/images?limit=8");
+      if (!response.ok) throw new Error("Failed to fetch random images");
       const data = await response.json();
-      setRandomImages(data);
+      setRandomImages(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("Error fetching random images:", err);
+      setRandomImages([]);
     } finally {
       setGalleryLoading(false);
     }
@@ -174,6 +177,7 @@ export default function Breeds() {
         const response = await fetch("/api/cat/breeds");
         if (!response.ok) throw new Error("Failed to fetch breeds");
         const data = await response.json();
+        if (!Array.isArray(data)) throw new Error("Breeds payload was not an array");
         
         const formattedBreeds: Breed[] = data.map((b: any) => ({
           id: b.id,

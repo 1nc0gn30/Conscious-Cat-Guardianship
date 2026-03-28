@@ -10,11 +10,18 @@ const json = (statusCode, body) => ({
   body: JSON.stringify(body),
 });
 
-const getSplatPath = (path = '') => {
-  const marker = '/.netlify/functions/cat-api/';
-  const idx = path.indexOf(marker);
-  if (idx === -1) return '';
-  return path.slice(idx + marker.length);
+const getRoute = (path = '') => {
+  const markers = ['/api/cat/', '/.netlify/functions/cat-api/'];
+  for (const marker of markers) {
+    const idx = path.indexOf(marker);
+    if (idx !== -1) {
+      return path
+        .slice(idx + marker.length)
+        .replace(/^\/+/, '')
+        .replace(/\/+$/, '');
+    }
+  }
+  return '';
 };
 
 const parseQuery = (rawQuery = '') => {
@@ -24,7 +31,7 @@ const parseQuery = (rawQuery = '') => {
 
 export const handler = async (event) => {
   try {
-    const route = getSplatPath(event.path);
+    const route = getRoute(event.path);
     const query = parseQuery(
       event.rawQuery ||
         (event.queryStringParameters
