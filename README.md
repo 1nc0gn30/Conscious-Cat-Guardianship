@@ -1,3 +1,62 @@
+# Conscious-Cat-Guardianship
+
+Conscious Cat Guardianship is a rescue-first cat care guide covering behavior, nutrition, breeds, and practical day-to-day feline wellbeing.
+
+## Overview
+Conscious Cat Guardianship is a rescue-first cat care guide covering behavior, nutrition, breeds, and practical day-to-day feline wellbeing.
+
+## Tech Stack
+- React
+- Vite
+- Express
+- Netlify (deployed)
+
+## Project Structure
+```
+Conscious-Cat-Guardianship/
+  - netlify
+  - public
+  - scripts
+  - src
+  (32 files total)
+```
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+
+### Installation
+```bash
+git clone https://github.com/1nc0gn30/Conscious-Cat-Guardianship.git
+cd Conscious-Cat-Guardianship
+npm install
+```
+
+### Development
+```bash
+npm run dev
+```
+
+### Build
+```bash
+npm run build
+```
+
+### Available Scripts
+  npm run dev - tsx server.ts
+  npm run sync:breed-images - node scripts/sync-breed-images.mjs
+  npm run predeploy:netlify - npm run sync:breed-images && npm run build
+  npm run build - vite build
+  npm run preview - vite preview
+  npm run clean - rm -rf dist
+  npm run lint - tsc --noEmit
+
+## Original README
+<details>
+<summary>Click to expand original README</summary>
+
 # Conscious Cat Guardianship
 
 Conscious Cat Guardianship is a cat-first guide for people who want to raise healthy, safe, and emotionally secure indoor cats.
@@ -99,3 +158,29 @@ Netlify routing is configured so known app routes serve the SPA, and unknown rou
 ## License
 
 MIT
+
+</details>
+
+## TODO / Roadmap
+- [ ] Add unit tests
+- [ ] Add LICENSE file
+- [ ] Add Dockerfile for containerized deployment
+- [ ] Consider adding Tailwind CSS
+- [ ] Add CI/CD pipeline
+- [ ] Add contribution guidelines (CONTRIBUTING.md)
+- [ ] Improve error handling and edge cases
+- [ ] Add environment variable documentation
+- [ ] Update dependencies to latest versions
+- [ ] Add code comments and inline documentation
+
+## Deployment
+This project is deployed on Netlify. See netlify.toml for configuration.
+
+## Author
+**Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
+
+## Links
+- GitHub: https://github.com/1nc0gn30/Conscious-Cat-Guardianship
+
+---
+*This README was enhanced as part of the neals-projects-2026 batch update.*
