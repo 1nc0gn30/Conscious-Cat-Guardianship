@@ -1,17 +1,29 @@
-# Conscious-Cat-Guardianship
+<!-- xonettn -->
+<div align="center">
+
+# 🐾 Conscious Cat Guardianship
 
 Conscious Cat Guardianship is a rescue-first cat care guide covering behavior, nutrition, breeds, and practical day-to-day feline wellbeing.
 
-## Overview
+
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
+
+![Deploy](https://img.shields.io/badge/Deployed-Netlify-00C7B7?logo=netlify&logoColor=white)
+
+</div>
+
+---
+
+## 📋 Overview
 Conscious Cat Guardianship is a rescue-first cat care guide covering behavior, nutrition, breeds, and practical day-to-day feline wellbeing.
 
-## Tech Stack
+## 📦 Tech Stack
 - React
 - Vite
 - Express
 - Netlify (deployed)
 
-## Project Structure
+## 🗂️ Project Structure
 ```
 Conscious-Cat-Guardianship/
   - netlify
@@ -21,30 +33,30 @@ Conscious-Cat-Guardianship/
   (32 files total)
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 - Node.js (v18+)
 - npm or yarn
 
-### Installation
+### 📦 Installation
 ```bash
 git clone https://github.com/1nc0gn30/Conscious-Cat-Guardianship.git
 cd Conscious-Cat-Guardianship
 npm install
 ```
 
-### Development
+### 💻 Development
 ```bash
 npm run dev
 ```
 
-### Build
+### 🔨 Build
 ```bash
 npm run build
 ```
 
-### Available Scripts
+### ⚙️ Available Scripts
   npm run dev - tsx server.ts
   npm run sync:breed-images - node scripts/sync-breed-images.mjs
   npm run predeploy:netlify - npm run sync:breed-images && npm run build
@@ -53,7 +65,7 @@ npm run build
   npm run clean - rm -rf dist
   npm run lint - tsc --noEmit
 
-## Original README
+## 📂 Original README
 <details>
 <summary>Click to expand original README</summary>
 
@@ -71,7 +83,7 @@ The site blends practical care advice with clear explanations, so you can make b
 - Rescue: A practical rescue and transition guide, including decompression timelines.
 - Breeds: Breed profiles, ethical context, and rescue-first guidance.
 
-## Features
+## ✨ Features
 
 - Searchable breed cards with temperament and care context.
 - Live cat facts and image gallery to keep the experience engaging.
@@ -80,11 +92,11 @@ The site blends practical care advice with clear explanations, so you can make b
 - Per-breed quick report button and a thank-you confirmation page.
 - One feedback submission per 24 hours per browser (client-side limit).
 
-## Privacy and API Safety
+## 🔌 Privacy and API Safety
 
 The project uses a server-side proxy so API keys stay private and are never exposed in browser code.
 
-## Run Locally
+## 🚀 Run Locally
 
 1. Install dependencies:
 ```bash
@@ -100,7 +112,7 @@ npm run dev
 ```
 4. Open `http://localhost:3000`
 
-## Deploy on Netlify
+## 🚀 Deploy on Netlify
 
 This repo includes `netlify.toml` and a Netlify Function that powers `/api/cat/*` routes.
 
@@ -113,7 +125,7 @@ This repo includes `netlify.toml` and a Netlify Function that powers `/api/cat/*
 
 Netlify will run the function server-side, so your key remains hidden from users.
 
-### Breed Feedback Form Setup (Netlify)
+### ⚙️ Breed Feedback Form Setup (Netlify)
 
 This project includes a Netlify form named `breed-feedback` for reporting:
 - wrong image
@@ -123,7 +135,7 @@ This project includes a Netlify form named `breed-feedback` for reporting:
 The form is pre-registered in `index.html` and submitted via `fetch` from the Breeds page.
 Successful submissions redirect users to `/thanks`.
 
-### Optional: Sync Breed Images Before Deploy
+### 🚀 Optional: Sync Breed Images Before Deploy
 
 Run this before deploy to build a local image map for all Cat API breeds. It uses `/breeds`, `reference_image_id`, and `/images/search` fallbacks.
 
@@ -139,7 +151,7 @@ One-shot deploy prep:
 npm run predeploy:netlify
 ```
 
-## SEO and Crawlability
+## 🔍 SEO and Crawlability
 
 The project includes:
 - `public/robots.txt`
@@ -148,20 +160,20 @@ The project includes:
 
 Netlify routing is configured so known app routes serve the SPA, and unknown routes return a real 404 page.
 
-## Tech Stack
+## 📦 Tech Stack
 
 - React + Vite
 - Tailwind CSS
 - Framer Motion
 - Netlify Functions
 
-## License
+## 📜 License
 
 MIT
 
 </details>
 
-## TODO / Roadmap
+## 📝 TODO / Roadmap
 - [ ] Add unit tests
 - [ ] Add LICENSE file
 - [ ] Add Dockerfile for containerized deployment
@@ -173,14 +185,22 @@ MIT
 - [ ] Update dependencies to latest versions
 - [ ] Add code comments and inline documentation
 
-## Deployment
+## 🚀 Deployment
 This project is deployed on Netlify. See netlify.toml for configuration.
 
-## Author
+## 👤 Author
 **Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
 
-## Links
+## 🔗 Links
 - GitHub: https://github.com/1nc0gn30/Conscious-Cat-Guardianship
 
 ---
 *This README was enhanced as part of the neals-projects-2026 batch update.*
+
+---
+
+<div align="center">
+
+**[xonettn]** · Built by [Neal Frazier](https://github.com/1nc0gn30) · [@AshAmplifies](https://twitter.com/AshAmplifies)
+
+</div>
